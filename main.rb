@@ -120,11 +120,15 @@ def test(mark_and_round = 5)
         mark -= 1 unless answer == "" #un punto por fallar + 5 puntos de la respuesta correcta
     end 
   end 
-
   puts "Your mark is" ; puts mark
 end 
 
 test()
+
+#Parece que he hecho otra cosa que no pedía el enunciado, la versión corregida lo dejo debajo
+def test_2(wrong_a, right_a)
+   score = right_a.to_i * 5 - wrong_a.to_i
+end 
 
 #act 20 
 def act_20()
