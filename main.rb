@@ -113,7 +113,7 @@ def test(mark_and_round = 5)
     puts "x + y = ?" 
     puts "the answer is: "
 
-    answer = gets.chomp().to_i.strip
+    answer = gets.chomp().to_i.strip #este función strip que no funciona en el editor online.
 
     unless answer == (x + y).to_i
         mark -= 5
