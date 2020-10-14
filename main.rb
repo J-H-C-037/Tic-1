@@ -135,7 +135,7 @@ def act_20()
     
     coin = gets.chomp().to_i
     
-    total += coin ** i 
+    total += coin * i 
 
   end 
 
