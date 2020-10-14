@@ -54,7 +54,7 @@ exchange_variable_value(3,34)
 #Act 16 
 
 def time_to_catch_b(position_1, speed_1, position_2, speed_2)
-  print "time needed: "; puts (position_2 - position_1) / (speed_1 - speed_2)
+  print "time needed: "; puts ((position_2 - position_1) / (speed_1 - speed_2)) * 60; puts "min"
 end 
 
 time_to_catch_b(1,5,6,4)
@@ -101,7 +101,7 @@ end
 
 #Act 19 
 def test(mark_and_round = 5)
-  mark = mark_and_round
+  mark = mark_and_round * 5
 
   mark_and_round.times do 
     x = rand(100)
@@ -113,10 +113,11 @@ def test(mark_and_round = 5)
     puts "x + y = ?" 
     puts "the answer is: "
 
-    answer = gets.chomp().to_i
+    answer = gets.chomp().to_i.strip
 
     unless answer == (x + y).to_i
-      mark -= 1
+        mark -= 5
+        mark -= 1 unless answer == "" #un punto por fallar + 5 puntos de la respuesta correcta
     end 
   end 
 
